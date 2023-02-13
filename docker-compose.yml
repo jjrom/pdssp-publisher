@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    image: jjrom/stac-proxy:latest
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - 4112:80
+    environment:
+      - INPUT_STAC_URL=${INPUT_STAC_URL}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1"]
+      interval: 1m
+      timeout: 5s
