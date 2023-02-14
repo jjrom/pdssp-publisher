@@ -29,7 +29,17 @@ const config = require('../config')
 async function proxify(req, res) {
 
 	if (!config.INPUT_STAC_URL) {
-		res.status(400).send()
+		res.status(400).json({
+			status:404,
+			message:'Missing INPUT_STAC_URL environment variable'
+		})
+	}
+
+	if (!config.PUBLIC_ENDPOINT) {
+		res.status(400).json({
+			status:404,
+			message:'Missing PUBLIC_ENDPOINT environment variable'
+		})
 	}
 	
 	const relativePath = '.' + req.originalUrl

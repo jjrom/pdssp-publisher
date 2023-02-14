@@ -23,7 +23,7 @@ const config = {
     INPUT_STAC_URL: process.env.INPUT_STAC_URL,
 
     // Public endpoint - without trailing /
-    PUBLIC_ENDPOINT: process.env.PUBLIC_ENDPOINT || 'http://localhost:4112',
+    PUBLIC_ENDPOINT: process.env.PUBLIC_ENDPOINT
 
 };
 

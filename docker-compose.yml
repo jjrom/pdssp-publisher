@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   app:
     image: jjrom/stac-proxy:latest
@@ -9,7 +9,8 @@ services:
     ports:
       - 4112:80
     environment:
-      - INPUT_STAC_URL=${INPUT_STAC_URL}
+      - INPUT_STAC_URL=${INPUT_STAC_URL:-}
+      - PUBLIC_ENDPOINT=${PUBLIC_ENDPOINT:-http://localhost:4112}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://127.0.0.1"]
       interval: 1m

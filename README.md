@@ -1,4 +1,4 @@
-# stac-publisher
+# stac-proxy
 A proxy to local/online STAC file
 
 ## Usage
