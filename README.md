@@ -9,6 +9,6 @@ Two environnement variable should be set :
 
 Example :
 
-    INPUT_STAC_URL=https://raw.githubusercontent.com/pdssp/pdssp-labtools/main/catalogs/omega_c_channel_proj/catalog.json \
+    INPUT_STAC_URL=https://raw.githubusercontent.com/pdssp/pdssp-stac-repo/test/versions/v0.1/ias/catalog.json \
     PUBLIC_ENDPOINT=http://localhost:4112 \
     docker compose up
